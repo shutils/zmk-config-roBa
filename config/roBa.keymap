@@ -106,12 +106,12 @@
         default_layer {
             bindings = <
 &kp Q          &kp W  &kp E         &kp R                        &kp T                                                           &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A          &kp S  &kp D         &kp F                        &kp G        &kp LS(LG(S))                &kp MINUS             &kp H        &kp J  &kp K      &kp L    &kp JP_COLON
+&kp A          &kp S  &kp D         &kp F                        &kp G        &kp LS(LG(S))                &kp MINUS             &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
 &kp Z          &kp X  &kp C         &kp V                        &kp B        &mo 3                        &kp BACKSPACE         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LG(LCTRL)  &none  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &mt LSHIFT INT_MUHENKAN      &mt RCTRL INT_HENKAN  &lt 1 ENTER                             &kp JP_YEN
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         FUNCTION {
@@ -160,7 +160,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         layer_6 {
