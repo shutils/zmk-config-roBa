@@ -93,6 +93,21 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
         };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <7 8>;
+        };
+
+        colon {
+            bindings = <&kp JP_COLON>;
+            key-positions = <8 9>;
+        };
+
+        equal {
+            bindings = <&kp JP_EQUAL>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
@@ -121,15 +136,15 @@
         default_layer {
             bindings = <
 &kp Q          &kp W  &kp E         &kp R                        &kp T                                                           &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A          &kp S  &kp D         &kp F                        &kp G        &kp LS(LG(S))                &kp JP_COLON             &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z          &kp X  &kp C         &kp V                        &kp B        &mo 3                        &kp BACKSPACE         &kp N        &kp M  &kp JP_COMMA  &kp JP_DOT  &kp JP_SLASH
-&kp LG(LCTRL)  &none  &kp LEFT_ALT  &lt_to_layer_0 6 JP_EISU  &mt LSHIFT INT_MUHENKAN  &lt 2 SPACE      &lt 1 ENTER  &mt RCTRL JP_HENK                             &kp JP_BSLH
+&kp A          &kp S  &kp D         &kp F                        &kp G        &kp LS(LG(S))                &kp JP_COLON             &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z          &kp X  &kp C         &kp V                        &kp B        &mo 6                        &kp BACKSPACE         &kp N        &kp M  &kp JP_COMMA  &kp JP_DOT  &kp JP_SLASH
+&kp LWIN  &none  &kp LEFT_ALT  &mo 2  &mt LSHIFT INT_MUHENKAN  &lt 3 SPACE      &lt 1 ENTER  &mt RCTRL JP_HENK                             &kp JP_BSLH
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
-        FUNCTION {
+        NUM {
             bindings = <
 &trans  &kp F7  &kp F8  &kp F9  &kp F10                      &trans     &kp KP_N7  &kp KP_N8        &kp KP_N9        &trans
 &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans  &trans     &kp KP_N4  &kp KP_N5        &kp KP_NUMBER_6  &trans
@@ -138,10 +153,10 @@
             >;
         };
 
-        NUM {
+        FUNCTION {
             bindings = <
-&kp EXCL  &kp JP_DQT  &kp HASH   &kp DOLLAR  &kp PERCENT                         &kp JP_AMPS  &kp JP_SQT      &kp JP_TILDE              &kp JP_LPAR  &kp JP_RPAR
-&trans    &trans             &kp MINUS  &kp JP_PLUS    &kp JP_ASTRK  &trans      &kp JP_PIPE  &kp JP_AT         &kp JP_LPAR  &kp JP_RPAR  &kp JP_LBKT      &kp JP_RBKT
+&kp EXCL  &kp JP_DQT  &kp HASH   &kp DOLLAR  &kp PERCENT                         &kp JP_AMPS  &kp JP_SQT      &kp JP_TILDE              &kp JP_LBKT  &kp JP_RBKT
+&trans    &trans             &kp MINUS  &kp JP_PLUS    &kp JP_ASTRK  &trans      &kp JP_PIPE  &kp JP_AT         &kp JP_LPAR  &kp JP_RPAR  &kp SEMICOLON  &kp JP_COLON
 &trans    &trans             &trans     &trans      &kp JP_EQUAL     &trans      &trans    &kp JP_CARET      &kp JP_LBRC        &kp JP_RBRC        &kp JP_GRAVE       &kp JP_UNDER
 &trans    &trans             &trans     &trans      &trans        &trans      &trans    &trans                                                                            &trans
             >;
