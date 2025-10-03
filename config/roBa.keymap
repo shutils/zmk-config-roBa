@@ -120,7 +120,7 @@
         };
 
         eisu {
-            bindings = <&kp JP_EISU>;
+            bindings = <&kp JP_MHEN>;
             key-positions = <24 25>;
         };
     };
