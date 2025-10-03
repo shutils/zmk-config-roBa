@@ -126,7 +126,7 @@
 &kp LG(LCTRL)  &none  &kp LEFT_ALT  &lt_to_layer_0 6 JP_EISU  &mt LSHIFT INT_MUHENKAN  &lt 2 SPACE      &lt 1 ENTER  &mt RCTRL JP_HENK                             &kp JP_BSLH
             >;
 
-            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         FUNCTION {
@@ -155,7 +155,7 @@
 &trans    &trans  &trans   &trans           &trans          &trans      &trans  &trans                                  &trans
             >;
 
-            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
@@ -175,7 +175,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         layer_6 {
