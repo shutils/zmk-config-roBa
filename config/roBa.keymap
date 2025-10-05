@@ -156,7 +156,7 @@
 &kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 2  &kp LSHIFT              &lt 3 SPACE      &lt 1 ENTER  &kp RCTRL                              &kp JP_BSLH
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(UP_ARROW) LC(DOWN_ARROW)>;
         };
 
         NUM {
@@ -185,7 +185,7 @@
 &trans    &trans  &trans   &trans           &trans          &trans      &trans  &trans                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(UP_ARROW) LC(DOWN_ARROW)>;
         };
 
         MOUSE {
@@ -205,7 +205,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(UP_ARROW) LC(DOWN_ARROW)>;
         };
 
         layer_6 {
