@@ -143,6 +143,11 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        rot_msc: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
 
     keymap {
@@ -156,7 +161,7 @@
 &kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 2  &kp LSHIFT              &lt 3 SPACE      &lt 1 ENTER  &kp RCTRL                              &kp JP_BSLH
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&rot_msc>;
         };
 
         NUM {
@@ -166,6 +171,8 @@
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans   &trans                  &trans  &trans                                      &trans
             >;
+
+            sensor-bindings = <&rot_msc>;
         };
 
         FUNCTION {
@@ -175,6 +182,8 @@
 &trans    &trans             &trans     &trans      &kp JP_EQUAL     &trans      &trans    &kp JP_CARET      &kp JP_LBRC        &kp JP_RBRC        &kp JP_GRAVE       &kp JP_UNDER
 &trans    &trans             &trans     &trans      &trans        &trans      &trans    &trans                                                                            &trans
             >;
+
+            sensor-bindings = <&rot_msc>;
         };
 
         ARROW {
@@ -185,7 +194,7 @@
 &trans    &trans  &trans   &trans           &trans          &trans      &trans  &trans                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&rot_msc>;
         };
 
         MOUSE {
@@ -195,6 +204,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
+
+            sensor-bindings = <&rot_msc>;
         };
 
         SCROLL {
@@ -205,7 +216,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&rot_msc>;
+        };
         };
 
         layer_6 {
