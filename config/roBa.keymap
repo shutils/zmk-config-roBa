@@ -79,14 +79,19 @@
             key-positions = <12 11>;
         };
 
-        esc_l {
+        esc {
             bindings = <&kp ESC>;
             key-positions = <10 11>;
         };
 
-        esc_r {
-            bindings = <&kp ESC>;
+        space {
+            bindings = <&kp SPACE>;
             key-positions = <20 21>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <13 18>;
         };
 
         delete {
