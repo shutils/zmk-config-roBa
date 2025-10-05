@@ -218,6 +218,7 @@
 
             sensor-bindings = <&rot_msc>;
         };
+        };
 
         layer_6 {
             bindings = <
