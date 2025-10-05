@@ -143,10 +143,10 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-        rot_msc: sensor_rotate_msc {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+        rot_msc: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
 
@@ -161,7 +161,7 @@
 &kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 2  &kp LSHIFT              &lt 3 SPACE      &lt 1 ENTER  &kp RCTRL                              &kp JP_BSLH
             >;
 
-            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_msc>;
         };
 
         NUM {
@@ -172,7 +172,7 @@
 &trans  &trans  &trans  &trans  &trans   &trans                  &trans  &trans                                      &trans
             >;
 
-            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_msc>;
         };
 
         FUNCTION {
@@ -183,7 +183,7 @@
 &trans    &trans             &trans     &trans      &trans        &trans      &trans    &trans                                                                            &trans
             >;
 
-            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_msc>;
         };
 
         ARROW {
@@ -194,7 +194,7 @@
 &trans    &trans  &trans   &trans           &trans          &trans      &trans  &trans                                  &trans
             >;
 
-            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_msc>;
         };
 
         MOUSE {
@@ -205,7 +205,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_msc>;
         };
 
         SCROLL {
@@ -216,7 +216,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&rot_msc>;
         };
 
         layer_6 {
