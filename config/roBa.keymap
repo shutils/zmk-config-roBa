@@ -143,11 +143,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(TAB) &sk LA>;
+            label = "NEXT_APP";
         };
         prev_app: prev_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LA(LS(TAB)) &sk LA>;
+            label = "PREV_APP";
         };
     };
 
