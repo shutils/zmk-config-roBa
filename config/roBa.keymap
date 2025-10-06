@@ -194,7 +194,7 @@
             bindings = <
 &trans    &trans        &kp END  &trans  &trans                                 &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans
 &kp HOME  &kp BACKSPACE &kp DEL  &trans  &trans  &trans                 &trans  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &trans
-&trans    &trans        &trans   &trans  &trans  &trans                 &trans  &trans              &trans              &trans            &trans               &trans
+&trans    &trans        &trans   &trans  &trans  &trans                 &trans  &sk LA(TAB)         &trans              &trans            &sk LA(LS(TAB))      &trans
 &trans    &trans        &trans   &trans  &trans  &trans                 &trans  &trans                                                                         &trans
             >;
         };
