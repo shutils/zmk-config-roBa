@@ -142,13 +142,13 @@
         next_app: next_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(TAB) &sk LA>;
+            bindings = <&kp LA(TAB) &sk LALT>;
             label = "NEXT_APP";
         };
         prev_app: prev_app {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(TAB)) &sk LA>;
+            bindings = <&kp LA(LS(TAB)) &sk LALT>;
             label = "PREV_APP";
         };
     };
