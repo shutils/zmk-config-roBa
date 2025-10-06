@@ -116,7 +116,7 @@
             key-positions = <7 8>;
         };
 
-        colon {
+        at {
             bindings = <&kp JP_AT>;
             key-positions = <8 9>;
         };
