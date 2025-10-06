@@ -172,7 +172,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&sk LA(TAB)>, <&sk LA(LS(TAB))>;
             tap-ms = <20>;
-        }
+        };
     };
 
     keymap {
