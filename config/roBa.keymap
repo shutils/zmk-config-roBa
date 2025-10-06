@@ -116,6 +116,11 @@
             key-positions = <7 8>;
         };
 
+        colon {
+            bindings = <&kp JP_AT>;
+            key-positions = <8 9>;
+        };
+
         equal {
             bindings = <&kp JP_EQUAL>;
             key-positions = <31 32>;
