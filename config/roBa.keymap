@@ -160,7 +160,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RCTRL>, <&mo 2>, <&kp LALT>;
+            bindings = <&kp RCTRL>, <&mo 3>, <&kp LALT>;
         };
 
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
@@ -174,7 +174,7 @@
         esc_minus: esc_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt 3 MINUS>, <&kp ESC>;
+            bindings = <&lt 1 MINUS>, <&kp ESC>;
             mods = <(MOD_RCTL)>;
         };
 
@@ -199,38 +199,38 @@
         default_layer {
             bindings = <
 &mt LWIN Q    &kp W      &kp E         &kp R  &kp T                                                   &kp Y  &kp U  &kp I             &kp O       &mt RWIN P
-&lt 3 A       &kp S      &kp D         &kp F  &kp G       &trans                       &kp JP_COLON   &kp H  &kp J  &kp K             &kp L       &esc_minus
+&lt 1 A       &kp S      &kp D         &kp F  &kp G       &trans                       &kp JP_COLON   &kp H  &kp J  &kp K             &kp L       &esc_minus
 &lt 2 Z       &kp X      &kp C         &kp V  &kp B       &mo 6                        &kp BACKSPACE  &kp N  &kp M  &comma_semicolon  &dot_colon  &lt 2 JP_SLASH
-&kp LWIN      &kp LCTRL  &kp LEFT_ALT  &mo 1  &kp LSHIFT  &lt 2 SPACE                  &lt 3 ENTER    &td0                                        &kp JP_BSLH
+&kp LWIN      &kp LCTRL  &kp LEFT_ALT  &mo 1  &kp LSHIFT  &kp SPACE                    &kp ENTER      &td0                                        &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
-        NUM {
+        SYMBOL {
             bindings = <
-&kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_N4    &kp KP_N5                             &kp KP_N6     &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_N0
-&kp EXCL      &kp JP_DQT    &kp HASH      &kp DOLLAR   &kp PERCENT   &trans        &trans    &kp JP_AMPS   &kp JP_SQT   &kp JP_LPAR  &kp JP_RPAR  &kp JP_COLON
-&kp JP_CARET  &kp JP_GRAVE  &kp JP_EQUAL  &kp JP_PLUS  &kp JP_ASTRK  &trans        &trans    &kp JP_LBRC   &kp JP_RBRC  &kp JP_LBKT  &kp JP_RBKT  &kp JP_SEMI
-&kp JP_AT     &trans        &trans        &trans       &trans        &trans        &trans    &trans                                               &kp JP_PIPE
+&kp EXCL      &kp JP_DQT    &kp HASH      &kp DOLLAR    &kp PERCENT                        &kp JP_AMPS   &kp JP_SQT    &kp JP_LPAR  &kp JP_RPAR  &kp JP_AT
+&kp JP_GRAVE  &kp JP_EQUAL  &kp JP_PLUS   &kp JP_ASTRK  &kp JP_PIPE  &trans        &trans  &kp JP_SLASH  &kp JP_DQT    &kp JP_LBKT  &kp JP_RBKT  &kp JP_SEMI
+&trans        &trans        &trans        &trans        &trans       &trans        &trans  &kp JP_BSLH   &kp JP_GRAVE  &kp JP_LBRC  &kp JP_RBRC  &kp JP_COLON
+&trans        &trans        &trans        &trans        &trans       &trans        &trans  &trans                                                &kp JP_PIPE
             >;
         };
 
-        ARROW {
+        ARROW_NUM {
             bindings = <
-&trans    &trans  &kp END  &kp LS(TAB)  &kp TAB                                          &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp UP_ARROW
-&kp HOME  &trans  &kp DEL  &kp RIGHT_ARROW  &trans  &trans                 &trans  &kp BACKSPACE       &trans              &trans            &trans               &kp ESC
-&trans    &trans  &trans   &trans           &trans  &trans                 &trans  &kp DOWN_ARROW      &trans              &trans            &trans               &trans
-&trans    &trans  &trans   &trans  &kp LEFT_ARROW   &trans                 &trans  &trans                                                                         &trans
+&trans    &trans  &kp END  &kp LS(TAB)      &kp TAB                                &trans          &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp UP_ARROW
+&kp HOME  &trans  &kp DEL  &kp RIGHT_ARROW  &trans  &trans                 &trans  &kp BACKSPACE   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp ESC
+&trans    &trans  &trans   &trans           &trans  &trans                 &trans  &kp DOWN_ARROW  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
+&trans    &trans  &trans   &trans  &kp LEFT_ARROW   &trans                 &trans  &kp KP_N0                                        &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                                     &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans                     &trans  &trans     &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans                     &trans  &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                     &trans  &trans                                      &trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                                     &trans     &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans                     &trans  &trans     &trans              &trans              &trans            &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans                     &trans  &trans     &trans              &trans              &trans            &trans
+&trans  &trans  &trans  &trans  &trans   &trans                     &trans  &trans                                                               &trans
             >;
         };
 
