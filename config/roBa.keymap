@@ -170,6 +170,13 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <20>;
         };
+
+        esc_minus: esc_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&lt 2 MINUS>;
+            mods = <(MOD_RCTL);
+        };
     };
 
     keymap {
