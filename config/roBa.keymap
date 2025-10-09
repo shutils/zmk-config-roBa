@@ -174,7 +174,7 @@
         esc_minus: esc_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&lt 2 MINUS>;
+            bindings = <&lt 2 MINUS>, <&kp ESC>;
             mods = <(MOD_RCTL)>;
         };
     };
