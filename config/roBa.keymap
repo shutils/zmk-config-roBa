@@ -175,7 +175,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&lt 2 MINUS>;
-            mods = <(MOD_RCTL);
+            mods = <(MOD_RCTL)>;
         };
     };
 
