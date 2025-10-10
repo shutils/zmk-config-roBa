@@ -167,7 +167,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&kp JP_EISU>;
+            bindings = <&kp LSHIFT>, <&kp JP_MHEN>;
         };
 
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
