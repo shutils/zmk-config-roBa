@@ -216,10 +216,10 @@
 
         SYMBOL {
             bindings = <
-&kp EXCL      &kp JP_DQT    &kp HASH      &kp DOLLAR    &kp PERCENT                        &kp JP_AMPS   &kp JP_SQT    &kp JP_LPAR  &kp JP_RPAR  &kp JP_AT
-&kp JP_TILDE  &kp JP_EQUAL  &kp JP_PLUS   &kp JP_ASTRK  &kp JP_PIPE  &trans        &trans  &kp JP_SLASH  &kp JP_DQT    &kp JP_LBKT  &kp JP_RBKT  &kp JP_SEMI
-&trans        &trans        &trans        &trans        &trans       &trans        &trans  &kp JP_BSLH   &kp JP_GRAVE  &kp JP_LBRC  &kp JP_RBRC  &kp JP_COLON
-&trans        &trans        &trans        &trans        &trans       &trans        &trans  &trans                                                &kp JP_PIPE
+&kp EXCL      &kp JP_DQT    &kp HASH      &kp DOLLAR    &kp PERCENT                         &kp JP_AMPS   &kp JP_SQT    &kp JP_LPAR  &kp JP_RPAR  &kp JP_AT
+&trans        &kp JP_EXCL   &kp JP_EQUAL  &kp JP_ASTRK  &kp JP_PIPE   &trans        &trans  &kp JP_SLASH  &kp JP_DQT    &kp JP_LBKT  &kp JP_RBKT  &kp JP_COLON
+&trans        &trans        &kp JP_MINUS  &kp JP_PLUS   &kp JP_TILDE  &trans        &trans  &kp JP_BSLH   &kp JP_GRAVE  &kp JP_LBRC  &kp JP_RBRC  &kp JP_SEMI
+&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                &kp JP_PIPE
             >;
         };
 
