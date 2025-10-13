@@ -81,59 +81,9 @@
             key-positions = <12 11>;
         };
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <10 11>;
-        };
-
-        space {
-            bindings = <&kp SPACE>;
-            key-positions = <20 21>;
-        };
-
         enter {
             bindings = <&kp ENTER>;
             key-positions = <13 18>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <19 20>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <18 19>;
-        };
-
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <6 7>;
-        };
-
-        colon {
-            bindings = <&kp JP_COLON>;
-            key-positions = <7 8>;
-        };
-
-        at {
-            bindings = <&kp JP_AT>;
-            key-positions = <8 9>;
-        };
-
-        equal {
-            bindings = <&kp JP_EQUAL>;
-            key-positions = <31 32>;
-        };
-
-        henkan {
-            bindings = <&kp JP_HENK>;
-            key-positions = <30 31>;
-        };
-
-        eisu {
-            bindings = <&kp JP_MHEN>;
-            key-positions = <24 25>;
         };
     };
 
