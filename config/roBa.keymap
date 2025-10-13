@@ -120,6 +120,13 @@
             bindings = <&kp LSHIFT>, <&kp JP_MHEN>;
         };
 
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 2>, <&mo 3>;
+        };
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             label = "zmk,keymap";
@@ -158,7 +165,7 @@
 &mt LWIN Q  &kp W      &kp E         &kp R  &kp T                                              &kp Y  &kp U  &kp I             &kp O       &mt RWIN P
 &lt 1 A     &kp S      &kp D         &kp F  &kp G  &trans                       &kp JP_COLON   &kp H  &kp J  &kp K             &kp L       &esc_minus
 &lt 2 Z     &kp X      &kp C         &kp V  &kp B  &mo 6                        &kp BACKSPACE  &kp N  &kp M  &comma_semicolon  &dot_colon  &lt 2 JP_SLASH
-&kp LWIN    &kp LCTRL  &kp LEFT_ALT  &mo 1  &td1   &kp SPACE                    &kp ENTER      &td0                                        &kp JP_BSLH
+&kp LWIN    &kp LCTRL  &kp LEFT_ALT  &td2   &td1   &kp SPACE                    &kp ENTER      &td0                                        &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -166,28 +173,28 @@
 
         SYMBOL {
             bindings = <
-&kp EXCL      &kp JP_DQT    &kp HASH      &kp DOLLAR    &kp PERCENT                         &kp JP_AMPS   &kp JP_SQT    &kp JP_LPAR  &kp JP_RPAR  &kp JP_AT
-&trans        &kp JP_EXCL   &kp JP_EQUAL  &kp JP_ASTRK  &kp JP_PIPE   &trans        &trans  &kp JP_SLASH  &kp JP_DQT    &kp JP_LBKT  &kp JP_RBKT  &kp JP_COLON
-&trans        &trans        &kp JP_MINUS  &kp JP_PLUS   &kp JP_TILDE  &trans        &trans  &kp JP_BSLH   &kp JP_GRAVE  &kp JP_LBRC  &kp JP_RBRC  &kp JP_SEMI
-&trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans                                                &kp JP_PIPE
+&kp EXCL  &kp JP_DQT   &kp HASH      &kp DOLLAR    &kp PERCENT                         &kp JP_AMPS   &kp JP_SQT    &kp JP_LPAR  &kp JP_RPAR  &kp JP_AT
+&trans    &kp JP_EXCL  &kp JP_EQUAL  &kp JP_ASTRK  &kp JP_PIPE   &trans        &trans  &kp JP_BSLH   &kp JP_DQT    &kp JP_LBKT  &kp JP_RBKT  &kp JP_COLON
+&trans    &trans       &kp JP_MINUS  &kp JP_PLUS   &kp JP_TILDE  &trans        &trans  &kp JP_UNDER  &kp JP_GRAVE  &kp JP_LBRC  &kp JP_RBRC  &kp JP_SEMI
+&trans    &trans       &trans        &trans        &trans        &trans        &trans  &trans                                                &kp JP_PIPE
             >;
         };
 
         ARROW_NUM {
             bindings = <
-&kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4        &kp KP_N5                           &kp KP_N6       &kp KP_N7     &kp KP_N8  &kp KP_N9  &trans
-&trans     &trans     &kp DEL    &kp RIGHT_ARROW  &trans          &trans      &trans  &kp BACKSPACE   &trans        &trans     &kp KP_N0  &trans
-&trans     &trans     &trans     &trans           &kp LEFT_ARROW  &trans      &trans  &kp DOWN_ARROW  &kp UP_ARROW  &trans     &trans     &trans
-&trans     &trans     &trans     &trans           &trans          &trans      &trans  &trans                                              &trans
+&kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4  &kp KP_N5                        &kp KP_N6      &kp KP_N7       &kp KP_N8       &kp KP_N9        &kp KP_N0
+&trans     &trans     &kp DEL    &trans     &trans     &trans        &trans  &kp BACKSPACE  &trans          &kp UP_ARROW    &trans           &trans
+&trans     &trans     &trans     &trans     &trans     &trans        &trans  &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans     &trans     &trans     &trans     &trans     &trans        &trans  &trans                                                          &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                        &trans              &trans              &trans            &trans               &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans        &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans        &trans  &trans              &trans              &trans            &trans               &trans
-&trans  &trans  &trans  &trans  &trans   &trans        &trans  &trans                                                                         &trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                        &trans  &trans              &trans              &trans               &trans
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans        &trans  &trans  &trans              &kp LG(UP_ARROW)    &trans               &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans        &trans  &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans
+&trans  &trans  &trans  &trans  &trans   &trans        &trans  &trans                                                               &trans
             >;
         };
 
