@@ -97,7 +97,11 @@
         to_0_ctrl: to_0_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp RCTRL>;
+            bindings
+                = <&macro_press &to 0 &kp RCTRL>
+                , <&macro_pause_for_release>
+                , <&macro_release &to 0 &kp RCTRL>
+                ;
         };
     };
 
