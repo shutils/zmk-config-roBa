@@ -94,6 +94,14 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+        tl_0_ctrl: tl_0_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &tl 0>
+                , <&macro_press &kp RCTRL>
+                ;
+        };
     };
 
     behaviors {
@@ -210,7 +218,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &mkp MB4  &mo 5     &mkp MB5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &to 0                                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &tl_0_ctrl                            &trans
             >;
         };
 
