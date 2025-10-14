@@ -225,10 +225,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans         &mo_7_alt  &trans     &trans                      &trans  &trans    &mo 5     &trans    &kp PRINTSCREEN
-&trans  &kp LG(LS(S))  &kp DEL    &kp LG(V)  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans  &trans      &trans  &trans  &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans         &trans     &trans     &trans  &trans      &trans  &to_0_ctrl                            &trans
+&trans  &trans         &trans     &trans     &trans                      &trans  &trans    &mo 5      &trans    &kp LA(PRINTSCREEN)
+&trans  &kp LG(LS(S))  &kp DEL    &kp LG(V)  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
+&trans  &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans  &trans      &trans  &trans  &mkp MB4  &mo_7_alt  &mkp MB5  &trans
+&trans  &trans         &trans     &trans     &trans  &trans      &trans  &to_0_ctrl                             &trans
             >;
         };
 
@@ -252,10 +252,10 @@
 
         layer_7 {
             bindings = <
-&trans  &kp LS(TAB)  &trans  &kp TAB  &trans                           &trans        &trans        &trans        &trans        &trans
-&trans  &trans       &trans  &trans   &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans       &trans  &trans   &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &trans       &trans  &trans   &trans  &trans      &trans       &trans                                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans       &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans       &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(TAB)  &trans  &kp TAB  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
     };
