@@ -97,10 +97,7 @@
         tl_0_ctrl: tl_0_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &tl 0>
-                , <&macro_press &kp RCTRL>
-                ;
+            bindings = <&tl 0 &kp RCTRL>;
         };
     };
 
