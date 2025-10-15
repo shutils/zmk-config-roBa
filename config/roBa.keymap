@@ -103,15 +103,6 @@
                 , <&macro_release &to 0 &kp RCTRL>
                 ;
         };
-        mo_7_alt: mo_7_alt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &mo 7 &kp LEFT_ALT>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo 7 &kp LEFT_ALT>
-                ;
-        };
     };
 
     behaviors {
@@ -167,17 +158,38 @@
             mods = <(MOD_RCTL)>;
         };
 
-        comma_semicolon: comma_semicolon {
+        kana: kana {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp JP_SEMI>;
+            bindings = <&kp COMMA>, <&kp JP_KANA>;
             mods = <(MOD_RCTL)>;
         };
 
-        dot_colon: dot_colon {
+        mhen: mhen {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp JP_COLON>;
+            bindings = <&kp DOT>, <&kp JP_MHEN>;
+            mods = <(MOD_RCTL)>;
+        };
+
+        trans_snipping: trans_snipping {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&kp LG(LS(S))>;
+            mods = <(MOD_RCTL)>;
+        };
+
+        trans_clip_paste: trans_clip_paste {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&kp LG(V)>;
+            mods = <(MOD_RCTL)>;
+        };
+
+        trans_del: trans_del {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&kp DEL>;
             mods = <(MOD_RCTL)>;
         };
     };
@@ -187,10 +199,10 @@
 
         default_layer {
             bindings = <
-&kp Q     &kp W      &kp E         &kp R  &kp T                                              &kp Y  &kp U        &kp I             &kp O       &kp P
-&kp A     &kp S      &kp D         &kp F  &kp G  &trans                       &kp JP_COLON   &kp H  &kp J        &kp K             &kp L       &esc_minus
-&kp Z     &kp X      &kp C         &kp V  &kp B  &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &comma_semicolon  &dot_colon  &kp JP_SLASH
-&kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 1  &td1   &kp SPACE                    &td2           &td0                                              &kp JP_BSLH
+&kp Q     &kp W      &kp E         &kp R  &kp T                                              &kp Y  &kp U     &kp I  &kp O  &kp P
+&kp A     &kp S      &kp D         &kp F  &kp G  &trans                       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
+&kp Z     &kp X      &kp C         &kp V  &kp B  &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
+&kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 1  &td1   &kp SPACE                    &td2           &td0                           &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -225,10 +237,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans         &trans     &trans     &trans                      &trans  &trans    &mo 5      &trans    &kp LA(PRINTSCREEN)
-&trans  &kp LG(LS(S))  &kp DEL    &kp LG(V)  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
-&trans  &kp LC(X)      &kp LC(C)  &kp LC(V)  &trans  &trans      &trans  &trans  &mkp MB4  &mo_7_alt  &mkp MB5  &trans
-&trans  &trans         &trans     &trans     &trans  &trans      &trans  &to_0_ctrl                             &trans
+&trans  &trans           &trans      &trans             &trans                      &trans  &trans    &mo 5      &trans    &trans
+&trans  &trans_snipping  &trans_del  &trans_clip_paste  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
+&trans  &trans           &trans      &trans             &trans  &trans      &trans  &trans  &mkp MB4  &trans     &mkp MB5  &trans
+&trans  &trans           &trans      &trans             &trans  &trans      &trans  &to_0_ctrl                             &trans
             >;
         };
 
@@ -247,15 +259,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans       &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans       &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(TAB)  &trans  &kp TAB  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
     };
