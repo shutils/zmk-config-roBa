@@ -161,14 +161,14 @@
         kana: kana {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp JP_KANA>;
+            bindings = <&kp DOT>, <&kp JP_KANA>;
             mods = <(MOD_RCTL)>;
         };
 
         mhen: mhen {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp JP_MHEN>;
+            bindings = <&kp COMMA>, <&kp JP_MHEN>;
             mods = <(MOD_RCTL)>;
         };
 
