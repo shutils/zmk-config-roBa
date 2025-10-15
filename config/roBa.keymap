@@ -227,13 +227,6 @@
             bindings = <&mkp MB5>, <&kp JP_KANA>;
             mods = <(MOD_RCTL)>;
         };
-
-        scroll_ctrl_i: scroll_ctrl_i {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mo 5>, <&kp RCTRL(I)>;
-            mods = <(MOD_RCTL)>;
-        };
     };
 
     keymap {
@@ -279,8 +272,8 @@
 
         MOUSE {
             bindings = <
-&trans  &trans           &trans      &trans             &trans                      &trans  &trans       &scroll_ctrl_i  &trans       &trans
-&trans  &trans_snipping  &trans_del  &trans_clip_paste  &trans  &trans      &trans  &trans  &mb1_ctrl_j  &mb3_ctrl_k     &mb2_ctrl_l  &trans
+&trans  &trans           &trans      &trans             &trans                      &trans  &trans       &trans          &trans       &trans
+&trans  &trans_snipping  &trans_del  &trans_clip_paste  &trans  &trans      &trans  &trans  &mb1_ctrl_j  &mb3_ctrl_k     &mb2_ctrl_l  &mo 5
 &trans  &trans           &trans      &trans             &trans  &trans      &trans  &trans  &mb4_enter   &trans          &mb5_kana    &trans
 &trans  &trans           &trans      &trans             &trans  &trans      &trans  &trans                                            &trans
             >;
