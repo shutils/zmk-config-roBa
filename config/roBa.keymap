@@ -237,7 +237,7 @@
 
         MOUSE {
             bindings = <
-&trans  &trans           &trans      &trans             &trans                      &trans  &trans    &mo 5      &trans    &trans
+&trans  &trans           &trans      &trans             &trans                      &trans  &trans    &lt 5 I    &trans    &trans
 &trans  &trans_snipping  &trans_del  &trans_clip_paste  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
 &trans  &trans           &trans      &trans             &trans  &trans      &trans  &trans  &mkp MB4  &trans     &mkp MB5  &trans
 &trans  &trans           &trans      &trans             &trans  &trans      &trans  &to_0_ctrl                             &trans
