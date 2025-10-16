@@ -119,20 +119,6 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RCTRL>, <&kp JP_KANA>, <&mo 3>;
-        };
-
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&kp JP_MHEN>;
-        };
-
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
             bindings = <&mo 2>, <&mo 3>;
         };
 
@@ -234,10 +220,10 @@
 
         default_layer {
             bindings = <
-&kp Q     &kp W      &kp E         &kp R  &kp T                                              &kp Y  &kp U     &kp I  &kp O  &kp P
-&kp A     &kp S      &kp D         &kp F  &kp G  &trans                       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
-&kp Z     &kp X      &kp C         &kp V  &kp B  &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
-&kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 1  &td1   &kp SPACE                    &td2           &td0                           &kp JP_BSLH
+&kp Q     &kp W      &kp E         &kp R  &kp T                                                   &kp Y  &kp U     &kp I  &kp O  &kp P
+&kp A     &kp S      &kp D         &kp F  &kp G       &trans                       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
+&kp Z     &kp X      &kp C         &kp V  &kp B       &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
+&kp LWIN  &kp LCTRL  &kp LEFT_ALT  &mo 1  &kp LSHIFT  &kp SPACE                    &td0           &kp RCTRL                      &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
