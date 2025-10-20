@@ -230,7 +230,7 @@
 &kp Q     &kp W      &kp E         &kp R  &kp T                                                   &kp Y  &kp U     &kp I  &kp O  &kp P
 &kp A     &kp S      &kp D         &kp F  &kp G       &trans                       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
 &kp Z     &kp X      &kp C         &kp V  &kp B       &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
-&kp LGUI  &kp LCTRL  &kp LEFT_ALT  &mo1   &kp LSHIFT  &kp SPACE                    &td0           &kp RCTRL                      &kp JP_BSLH
+&kp LGUI  &kp LCTRL  &kp LEFT_ALT  &mo 1   &kp LSHIFT  &kp SPACE                    &td0           &kp RCTRL                      &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
