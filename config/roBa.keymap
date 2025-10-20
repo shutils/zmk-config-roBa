@@ -122,13 +122,6 @@
             bindings = <&mo 2>, <&mo 3>;
         };
 
-        td1: symbol_arrow {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&mo 7>;
-        };
-
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             label = "zmk,keymap";
@@ -237,7 +230,7 @@
 &kp Q     &kp W      &kp E         &kp R  &kp T                                                   &kp Y  &kp U     &kp I  &kp O  &kp P
 &kp A     &kp S      &kp D         &kp F  &kp G       &trans                       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
 &kp Z     &kp X      &kp C         &kp V  &kp B       &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
-&kp LGUI  &kp LCTRL  &kp LEFT_ALT  &td1   &kp LSHIFT  &kp SPACE                    &td0           &kp RCTRL                      &kp JP_BSLH
+&kp LGUI  &kp LCTRL  &kp LEFT_ALT  &mo1   &kp LSHIFT  &kp SPACE                    &td0           &kp RCTRL                      &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -248,25 +241,25 @@
 &kp EXCL      &kp JP_DQT    &kp HASH      &kp DOLLAR    &kp PERCENT                        &kp JP_AMPS  &kp JP_SQT    &kp JP_LPAR  &kp JP_RPAR  &kp JP_AT
 &kp JP_PIPE   &kp PERCENT   &kp JP_PLUS   &kp JP_ASTRK  &trans       &trans        &trans  &kp JP_BSLH  &kp JP_DQT    &kp JP_LBKT  &kp JP_RBKT  &kp JP_COLON
 &kp JP_TILDE  &kp JP_CARET  &kp JP_UNDER  &kp DOLLAR    &trans       &trans        &trans  &kp JP_AMPS  &kp JP_GRAVE  &kp JP_LBRC  &kp JP_RBRC  &kp JP_SEMI
-&trans        &trans        &trans        &trans        &trans       &trans        &trans  &trans                                               &kp JP_PIPE
+&trans        &trans        &trans        &trans        &trans       &trans        &trans  &trans                                               &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N4    &kp KP_N5                            &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0
-&trans     &trans     &kp DEL    &kp TAB      &kp ENTER      &trans        &trans  &kp BACKSPACE  &kp JP_PLUS  &kp JP_ASTRK  &kp PERCENT  &kp MINUS
-&trans     &trans     &trans     &kp LS(TAB)  &kp LS(ENTER)  &trans        &trans  &trans         &trans       &trans        &trans       &trans
-&trans     &trans     &trans     &trans       &trans         &trans        &trans  &trans                                                 &trans
+&kp KP_N1  &kp KP_N2      &kp KP_N3  &kp KP_N4        &kp KP_N5                          &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0
+&kp LALT   &kp LG(LS(S))  &kp DEL    &kp LG(LS(TAB))  &kp LG(TAB)  &trans        &trans  &kp BACKSPACE  &kp JP_PLUS  &kp JP_ASTRK  &kp PERCENT  &kp MINUS
+&trans     &trans         &trans     &kp LG(V)        &trans       &trans        &trans  &trans         &trans       &trans        &trans       &trans
+&trans     &trans         &trans     &trans           &trans       &trans        &trans  &trans                                                 &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&kp F1           &kp F2         &kp F3   &kp F4     &kp F5                        &kp F6         &kp F7  &kp F8  &kp F9  &kp F10
-&trans           &kp LG(LS(S))  &kp DEL  &trans     &trans  &trans        &trans  &kp BACKSPACE  &trans  &trans  &trans  &kp F11
-&trans           &trans         &trans   &kp LG(V)  &trans  &trans        &trans  &trans         &trans  &trans  &trans  &kp F12
-&kp LC(LA(DEL))  &trans         &trans   &trans     &trans  &trans        &trans  &trans                                 &trans
+&kp F1           &kp F2         &kp F3   &kp F4     &kp F5                        &kp F6         &kp F7            &kp F8    &kp F9             &kp F10
+&kp LALT         &kp LG(LS(S))  &kp DEL  &trans     &trans  &trans        &trans  &kp BACKSPACE  &kp LG(LS(LEFT))  &kp UP    &kp LG(LS(RIGHT))  &kp F11
+&kp LC(LA(DEL))  &trans         &trans   &kp LG(V)  &trans  &trans        &trans  &trans         &kp LEFT          &kp DOWN  &kp RIGHT          &kp F12
+&trans           &trans         &trans   &trans     &trans  &trans        &trans  &trans                                                        &trans
             >;
         };
 
@@ -294,15 +287,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-            >;
-        };
-
-        ARROW {
-            bindings = <
-&kp LGUI      &trans      &trans     &trans       &trans                        &trans         &trans     &kp UP    &trans     &trans
-&kp LEFT_ALT  &kp LSHIFT  &kp DEL    &kp TAB      &trans  &trans        &trans  &kp BACKSPACE  &kp LEFT   &kp DOWN  &kp RIGHT  &trans
-&trans        &trans      &kp LCTRL  &kp LS(TAB)  &trans  &trans        &trans  &trans         &trans     &trans    &trans     &trans
-&trans        &trans      &trans     &trans       &trans  &trans        &trans  &trans                                         &trans
             >;
         };
     };
