@@ -247,10 +247,10 @@
 
         NUM {
             bindings = <
-&kp KP_N1  &kp KP_N2      &kp KP_N3  &kp KP_N4        &kp KP_N5                          &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0
-&kp LALT   &kp LG(LS(S))  &kp DEL    &kp LA(LS(TAB))  &kp LA(TAB)  &trans        &trans  &kp BACKSPACE  &kp JP_PLUS  &kp JP_ASTRK  &kp PERCENT  &kp MINUS
-&trans     &trans         &trans     &kp LG(V)        &trans       &trans        &trans  &trans         &trans       &trans        &trans       &trans
-&trans     &trans         &trans     &trans           &trans       &trans        &trans  &trans                                                 &trans
+&kp KP_N1  &kp KP_N2      &kp KP_N3  &kp KP_N4    &kp KP_N5                        &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0
+&kp LALT   &kp LG(LS(S))  &kp DEL    &kp LS(TAB)  &kp TAB    &trans        &trans  &kp BACKSPACE  &kp JP_PLUS  &kp JP_ASTRK  &kp PERCENT  &kp MINUS
+&trans     &trans         &trans     &kp LG(V)    &trans     &trans        &trans  &trans         &trans       &trans        &trans       &trans
+&trans     &trans         &trans     &trans       &trans     &trans        &trans  &trans                                                 &trans
             >;
         };
 
