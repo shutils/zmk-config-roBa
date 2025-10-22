@@ -277,7 +277,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans    &trans       &trans       &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB1  &to_0_mb1    &mb3_ctrl_k  &mb2_ctrl_l  &scroll_esc
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &mb4_enter   &to0_mhen    &mb5_kana    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &mb4_enter   &to0_mhen    &mb5_kana    &tog 5
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                           &trans
             >;
         };
@@ -286,7 +286,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &tog 5
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
