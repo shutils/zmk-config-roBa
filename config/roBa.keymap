@@ -316,10 +316,10 @@
 
         ARROW_1 {
             bindings = <
-&trans  &trans  &trans   &trans  &trans                      &trans         &LA(LS(TAB))  &kp UP    &LA(TAB)   &trans
-&trans  &trans  &kp DEL  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT      &kp DOWN  &kp RIGHT  &trans
-&trans  &trans  &trans   &trans  &trans  &trans      &trans  &trans         &trans        &trans    &trans     &trans
-&trans  &trans  &trans   &trans  &trans  &trans      &trans  &trans                                            &trans
+&trans  &trans  &trans   &trans  &trans                      &trans         &kp LA(LS(TAB))  &kp UP    &kp LA(TAB)  &trans
+&trans  &trans  &kp DEL  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT         &kp DOWN  &kp RIGHT    &trans
+&trans  &trans  &trans   &trans  &trans  &trans      &trans  &trans         &trans           &trans    &trans       &trans
+&trans  &trans  &trans   &trans  &trans  &trans      &trans  &trans                                                 &trans
             >;
         };
 
