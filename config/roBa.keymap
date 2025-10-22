@@ -220,7 +220,7 @@
         to0_mhen: to0_mhen {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&kp JP_KANA>;
+            bindings = <&to 0>, <&kp JP_MHEN>;
             mods = <(MOD_RCTL)>;
         };
 
