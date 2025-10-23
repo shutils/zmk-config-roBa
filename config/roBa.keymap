@@ -51,7 +51,7 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
+    // automouse-layer = <4>;
     scroll-layers = <5>;
 
     // arrows {
@@ -164,7 +164,7 @@
         esc_minus: esc_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp ESC>;
+            bindings = <&lt 4 MINUS>, <&kp ESC>;
             mods = <(MOD_RCTL)>;
         };
 
@@ -193,41 +193,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&trans>, <&kp LG(V)>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        mb1_ctrl_j: mb1_ctrl_j {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1>, <&kp RCTRL(J)>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        mb2_ctrl_l: mb2_ctrl_l {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mkp MB2>, <&kp RCTRL(L)>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        mb3_ctrl_k: mb3_ctrl_k {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mkp MB3>, <&kp RCTRL(K)>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        mb4_enter: mb4_enter {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mkp MB4>, <&kp ENTER>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        mb5_kana: mb5_kana {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&mkp MB5>, <&kp JP_KANA>;
             mods = <(MOD_RCTL)>;
         };
 
@@ -289,19 +254,19 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans       &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mb3_ctrl_k  &mb2_ctrl_l  &scroll_esc
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &to0_mhen    &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                      &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mo 5     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &trans    &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &trans  &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
