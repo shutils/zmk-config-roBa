@@ -252,10 +252,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1           &kp F2         &kp F3   &kp F4           &kp F5                             &kp F6         &kp F7            &kp F8    &kp F9             &kp F10
-&kp LALT         &kp LG(LS(S))  &kp DEL  &kp LG(LS(TAB))  &kp LG(TAB)  &trans        &trans  &kp BACKSPACE  &kp LG(LS(LEFT))  &kp UP    &kp LG(LS(RIGHT))  &kp F11
-&kp LC(LA(DEL))  &trans         &trans   &kp LG(V)        &trans       &trans        &trans  &trans         &kp LEFT          &kp DOWN  &kp RIGHT          &kp F12
-&trans           &trans         &trans   &trans           &trans       &trans        &trans  &trans                                                        &trans
+&kp F1           &kp F2         &kp F3   &kp F4           &kp F5                             &kp F6         &kp F7            &kp F8        &kp F9             &kp F10
+&kp LALT         &kp LG(LS(S))  &kp DEL  &kp LG(LS(TAB))  &kp LG(TAB)  &trans        &trans  &kp BACKSPACE  &kp LG(LS(LEFT))  &trans        &kp LG(LS(RIGHT))  &kp F11
+&kp LC(LA(DEL))  &trans         &trans   &kp LG(V)        &trans       &trans        &trans  &trans         &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP       &kp F12
+&trans           &trans         &trans   &trans           &trans       &trans        &trans  &trans                                                            &trans
             >;
         };
 
