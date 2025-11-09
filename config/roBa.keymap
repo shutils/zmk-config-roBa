@@ -171,7 +171,7 @@
         esc_minus: esc_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt 4 MINUS>, <&kp ESC>;
+            bindings = <&kp MINUS>, <&kp ESC>;
             mods = <(MOD_RCTL)>;
         };
 
@@ -223,10 +223,10 @@
 
         default_layer {
             bindings = <
-&kp Q     &kp W      &kp E      &kp R          &kp T                                                   &kp Y  &kp U     &kp I  &kp O  &kp P
-&kp A     &kp S      &kp D      &kp F          &kp G       &trans                       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
-&kp Z     &kp X      &kp C      &kp V          &kp B       &mo 6                        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
-&kp LGUI  &alt_ctrl  &arrow_td  &symbol_mouse  &kp LSHIFT  &kp SPACE                    &td0           &kp RCTRL                      &kp JP_BSLH
+&kp Q     &kp W      &kp E      &kp R  &kp T                                   &kp Y  &kp U     &kp I  &kp O  &kp P
+&kp A     &kp S      &kp D      &kp F  &kp G       &trans       &kp JP_COLON   &kp H  &kp J     &kp K  &kp L  &esc_minus
+&kp Z     &kp X      &kp C      &kp V  &kp B       &mo 6        &kp BACKSPACE  &kp N  &m_enter  &mhen  &kana  &kp JP_SLASH
+&kp LGUI  &alt_ctrl  &arrow_td  &td0   &kp LSHIFT  &kp SPACE    &mo 1          &kp RCTRL                      &kp JP_BSLH
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -243,10 +243,10 @@
 
         NUM {
             bindings = <
-&kp KP_N1  &kp KP_N2      &kp KP_N3  &kp KP_N4    &kp KP_N5                        &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0
-&kp LALT   &kp LG(LS(S))  &kp DEL    &kp LS(TAB)  &kp TAB    &trans        &trans  &kp BACKSPACE  &kp JP_PLUS  &kp JP_ASTRK  &kp PERCENT  &kp MINUS
-&trans     &trans         &trans     &kp LG(V)    &trans     &trans        &trans  &trans         &trans       &trans        &trans       &trans
-&trans     &trans         &trans     &trans       &trans     &trans        &trans  &trans                                                 &trans
+&kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_N4  &kp KP_N5                                    &kp KP_N6      &kp KP_N7  &kp KP_N8  &kp KP_N9     &kp KP_N0
+&kp LALT   &kp LSHIFT  &kp DEL    &kp TAB    &kp LS(TAB)  &trans                  &trans  &kp BACKSPACE  &mkp MB1   &mkp MB3   &mkp MB2      &mo 5
+&kp LCTRL  &trans      &kp LC(C)  &kp LC(V)  &trans       &trans                  &trans  &trans         &mkp MB4   &trans     &mkp mkp MB5  &trans
+&trans     &trans      &trans     &trans     &trans       &trans                  &trans  &trans                                             &trans
             >;
         };
 
