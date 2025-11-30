@@ -288,7 +288,7 @@
 
         ARROW_1 {
             bindings = <
-&trans    &trans  &kp END  &trans  &trans                      &trans         &kp LA(LS(TAB))  &kp UP    &kp LA(TAB)  &trans
+&trans    &trans  &kp END  &trans  &trans                      &trans         &kp LA(LS(TAB))  &kp UP    &kp LA(TAB)  &kp LG(TAB)
 &kp HOME  &trans  &kp DEL  &trans  &trans  &trans      &trans  &kp BACKSPACE  &kp LEFT         &kp DOWN  &kp RIGHT    &trans
 &trans    &trans  &trans   &trans  &trans  &trans      &trans  &trans         &trans           &trans    &trans       &trans
 &trans    &trans  &trans   &trans  &trans  &trans      &trans  &trans                                                 &trans
@@ -297,10 +297,10 @@
 
         ARROW_2 {
             bindings = <
-&trans  &trans        &kp LA(UP)    &trans         &trans                      &trans  &kp LG(LS(LEFT))  &kp LG(UP)    &kp LG(LS(RIGHT))  &trans
-&trans  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &trans  &trans      &trans  &trans  &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &trans
-&trans  &trans        &trans        &trans         &trans  &trans      &trans  &trans  &trans            &kp LG(D)     &trans             &trans
-&trans  &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                     &trans
+&trans  &trans        &kp LA(UP)    &trans         &trans                      &trans            &kp LG(LS(LEFT))  &kp LG(UP)    &kp LG(LS(RIGHT))  &kp LG(LC(LEFT))
+&trans  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &trans  &trans      &trans  &trans            &kp LG(LEFT)      &kp LG(DOWN)  &kp LG(RIGHT)      &trans
+&trans  &trans        &trans        &trans         &trans  &trans      &trans  &kp LG(LC(RIGHT))  &trans            &kp LG(D)     &trans             &trans
+&trans  &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                               &trans
             >;
         };
     };
